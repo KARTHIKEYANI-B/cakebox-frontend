@@ -1,9 +1,7 @@
-/* Tailwind v3 directives — replaces @import "tailwindcss" */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -11,6 +9,12 @@
   --peach: #FF8C61;
   --rose: #E8546A;
   --brown: #4A2C2A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,18 +27,20 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #FFF8F0; }
 ::-webkit-scrollbar-thumb { background: #FF8C61; border-radius: 3px; }
 
-/* Hide scrollbar but keep scroll */
+/* Hide scrollbar for occasion bar */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Card hover lift */
+/* Card hover lift animation */
 .card-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -43,7 +49,7 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 20px 40px rgba(74, 44, 42, 0.15);
 }
 
-/* Shimmer loading */
+/* Shimmer loading skeleton */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
